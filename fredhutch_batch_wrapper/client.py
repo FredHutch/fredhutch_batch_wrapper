@@ -1,5 +1,7 @@
 "REST client"
 
+import pkg_resources
+
 import boto3
 import botocore
 import requests
@@ -21,7 +23,8 @@ Message: {error}
         self.kwargs = kwargs
         print("hooha")
 
-SERVER_ENDPOINT = "http://localhost:5000" # FIXME TODO CHANGEME update this!
+# SERVER_ENDPOINT = "http://localhost:5000" # for testing with local server
+SERVER_ENDPOINT = "https://batch-dashboard.fhcrc.org"
 
 class Client(object):
     "REST client"
@@ -39,8 +42,9 @@ class Client(object):
 
     def post_request(self, endpoint, **kwargs):
         "post a request"
+        cert = pkg_resources.resource_filename('fredhutch_batch_wrapper', 'godaddy.crt')
         endpoint_url = "{}/{}".format(SERVER_ENDPOINT, endpoint)
-        res = requests.post(endpoint_url, json=kwargs,
+        res = requests.post(endpoint_url, json=kwargs, verify=cert,
                             auth=requests.auth.HTTPBasicAuth(self.access_key,
                                                              self.secret_key))
         if res.status_code != 200:
