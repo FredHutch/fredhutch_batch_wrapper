@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 "REST client"
 
 import pkg_resources
@@ -21,7 +23,6 @@ Message: {error}
         msg = self.fmt.format(**kwargs)
         Exception.__init__(self, msg)
         self.kwargs = kwargs
-        print("hooha")
 
 # SERVER_ENDPOINT = "http://localhost:5000" # for testing with local server
 SERVER_ENDPOINT = "https://batch-dashboard.fhcrc.org"

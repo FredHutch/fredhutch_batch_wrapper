@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
+
 "Command-line entrypoint"
+
+import argparse
 
 def cmdline():
     "Command-line entrypoint"

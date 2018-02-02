@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 "external api"
 from fredhutch_batch_wrapper.client import Client
 
