@@ -2,6 +2,7 @@
 
 "REST client"
 
+import os
 import pkg_resources
 
 import boto3
@@ -24,8 +25,8 @@ Message: {error}
         Exception.__init__(self, msg)
         self.kwargs = kwargs
 
-# SERVER_ENDPOINT = "http://localhost:5000" # for testing with local server
-SERVER_ENDPOINT = "https://batch-dashboard.fhcrc.org"
+SERVER_ENDPOINT = os.getenv("FREDHUTCH_BATCH_WRAPPER_SERVER_URL",
+                            "https://batch-dashboard.fhcrc.org")
 
 class Client(object):
     "REST client"
