@@ -39,6 +39,7 @@ for help on each subcommand.""".format(parser.prog)
     args.func(args)
 
 # TODO make exceptions tidier?
+# TODO exit code > 0 on error
 
 def clean(obj):
     "strip out response metadata and use pretty json formatting"
