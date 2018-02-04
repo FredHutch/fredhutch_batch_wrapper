@@ -3,6 +3,7 @@
 "REST client"
 
 import os
+import pathlib
 import pkg_resources
 
 import boto3
@@ -45,6 +46,8 @@ class Client(object):
     def post_request(self, endpoint, **kwargs):
         "post a request"
         cert = pkg_resources.resource_filename('fredhutch_batch_wrapper', 'godaddy.crt')
+        certpath = pathlib.Path(cert)
+        assert certpath.is_file()
         endpoint_url = "{}/{}".format(SERVER_ENDPOINT, endpoint)
         res = requests.post(endpoint_url, json=kwargs, verify=cert,
                             auth=requests.auth.HTTPBasicAuth(self.access_key,
