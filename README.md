@@ -67,6 +67,17 @@ There are two ways to use this wrapper: via the command line,
 and via Python. (Soon you will be able to submit and terminate
 jobs via the [batch dashboard](https://batch-dashboard.fhcrc.org/)).
 
+Either way, you need to make sure you are using the appropriate
+version of Python, in which you have previously installed the wrapper.
+Be sure to run
+
+```
+ml Python/3.6.4-foss-2016b-fh1
+```
+
+before working with the wrapper.
+
+
 ### Command Line
 
 Usage is similar to that of the [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/batch/index.html) for Batch.
