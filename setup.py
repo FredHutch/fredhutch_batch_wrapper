@@ -21,5 +21,10 @@ setup(
         'console_scripts': [
             'batchwrapper = fredhutch_batch_wrapper.cmdline:cmdline'
         ]
+    },
+    options={
+        'build_scripts': {
+            'executable': '/usr/bin/env python'
+        }
     }
 )
