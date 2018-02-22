@@ -11,7 +11,7 @@ unset PYTHONPATH
 unset PYTHONUSERBASE
 unset PYTHONHOME
 
-PYTHON=python
+PYTHON=/app/local/fredhutch_batch_wrapper/env/bin/python
 SCRIPT=/app/local/fredhutch_batch_wrapper/env/bin/batchwrapper
 
 ml Python/3.6.4-foss-2016b-fh1
