@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 "setup script"
 
@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="fredhutch_batch_wrapper",
-    version="0.6",
+    version="0.7",
     packages=find_packages(),
     include_package_data=True,
     install_requires=['boto3', 'requests'],
@@ -24,7 +24,7 @@ setup(
     },
     options={
         'build_scripts': {
-            'executable': '/usr/bin/env python'
-        }
-    }
+            'executable': '/usr/bin/env python',
+        },
+    },
 )
