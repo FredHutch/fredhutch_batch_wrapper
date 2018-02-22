@@ -9,6 +9,7 @@ setup(
     name="fredhutch_batch_wrapper",
     version="0.5",
     packages=find_packages(),
+    include_package_data=True,
     install_requires=['boto3', 'requests'],
     author='Dan Tenenbaum',
     author_email='dtenenba@fredhutch.org',
