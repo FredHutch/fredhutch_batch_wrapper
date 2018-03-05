@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="fredhutch_batch_wrapper",
-    version="0.7",
+    version="0.8",
     packages=find_packages(),
     include_package_data=True,
     install_requires=['boto3', 'requests'],
@@ -16,15 +16,4 @@ setup(
     description='Fred Hutch Wrapper for AWS Batch',
     license='MIT',
     url='https://github.com/FredHutch/fredhutch_batch_wrapper',
-
-    entry_points={
-        'console_scripts': [
-            'batchwrapper = fredhutch_batch_wrapper.cmdline:cmdline'
-        ]
-    },
-    options={
-        'build_scripts': {
-            'executable': '/usr/bin/env python',
-        },
-    },
 )
